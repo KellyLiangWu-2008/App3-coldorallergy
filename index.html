@@ -54,6 +54,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 
 
+
 <style>	
 .body {
      margin: 0em;
@@ -127,11 +128,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
 	<div id="content" class="w3-container">
-		<p>Do you have a sore throat</p>
+		<p>Do you have a sore throat</p> 
 
-		<a href="#four"  onclick="coldAdd();" class="w3-btn w3-green"> Yes </a>
+		<a href="#four"  onclick="coldAdd();" class="w3-btn w3-green"> Yes </a> / / This function adds 1 to the cold count when the user presses it.
 
-		<a href="#four"  onclick="allergyAdd();" class="w3-btn w3-red"> No </a>
+		<a href="#four"  onclick="allergyAdd();" class="w3-btn w3-red"> No </a> / / This function adds 1 to the allergy count when the user presses it.
 
 		</div>
 </div>
@@ -151,7 +152,16 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		</div>
 </div>
 
-<p id="results"></p>
+<div class="page" id="resultsPage">
+	<div class="w3-container w3-flat-carrot">
+		<h1>Your Results</h1>
+	</div>
+	
+	<div class="w3-container">
+		<p> id="results"></p>
+		<a onclick="results()" class="w3-btn w3-black">Show Results</a>
+    </div>
+</div>
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
