@@ -36,23 +36,23 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 
 <script>
-        var allergy_count = 0; // This function keeps track of the allergy count and starts at zero
-        var cold_count = 0; // This function keeps track of the cold count and starts at zero
+        var allergy_count = 0; // This variable keeps track of the allergy count and starts at zero
+        var cold_count = 0; // This variable keeps track of the cold count and starts at zero
 
 
-        function allergyAdd(){
-            allergy_count = allergy_count + 1; // This variable stores responses for allergies and adds 1 every time a symptom for allergy is chosen
+        function allergyAdd(){ // This function is for when an answer for allergy is chosen
+            allergy_count = allergy_count + 1; // This stores responses for allergies and adds 1 every time a symptom for allergy is chosen
 
         }
 
-        function coldAdd(){
-            cold_count = cold_count + 1; // This variable stores responses for cold and adds 1 every time a symptom for cold is chosen
+        function coldAdd(){ // This function is for when an answer for allergy is chosen
+            cold_count = cold_count + 1; // This stores responses for cold and adds 1 every time a symptom for cold is chosen
         }
 
 		function results(){
-			var total = allergy_count + cold_count; // This function calculates the total for both allergy and cold count in order to find the AllergyPercent and ColdPercent
-			var allergyPercent = (allergy_count/total) * 100 // This function outputs the result of the survey by calculating the percentage of the answers that supports the diagnosis of allergies
-			var coldPercent = (cold_count/total) * 100 // This function outputs the result of the survey by calculating the percentage of the answers that supports the diagnosis of cold
+			var total = allergy_count + cold_count; // This calculates the total for both allergy and cold count in order to find the AllergyPercent and ColdPercent
+			var allergyPercent = (allergy_count/total) * 100 // This outputs the result of the survey by calculating the percentage of the answers that supports the diagnosis of allergies
+			var coldPercent = (cold_count/total) * 100 // This outputs the result of the survey by calculating the percentage of the answers that supports the diagnosis of cold
 
 			document.getElementById("results").innerHTML = 
 				"Allergy: " + allergyPercent + "%<br>" + // Displays the final results for allergies percentage calculation
