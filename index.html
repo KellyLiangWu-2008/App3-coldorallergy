@@ -85,20 +85,20 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
-	<h1>Cold or Allergies?</h1>
+	<h1>Cold or Allergies?</h1> <!-- Header for the first page of the website -->
 </div>
 	
 <div id="content" class="w3-container">
 	<p>Are you feeling like you might have a cold but wonder if it is allergies. Answer a few short questions to find out!</p>
 	
-	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
+	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a> <!-- Button to allow the app to scroll to the next page when clicked -->
 	
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 </div> <!-- adding this because it seems to be missing????? -->
 	
-<div class="page" id="one">
+<div class="page" id="one"> <!-- Creates a new page and assigns its id as one so that when the Get Started button is clicked it moves to this page -->
 	<div id="header1" class="w3-container w3-flat-carrot">
 		<h1>Question 1</h1>
 	</div>
@@ -106,9 +106,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     	<div id="content1" class="w3-container">
         <p>Are your eyes watery or itchy?</p>    
 
-		<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-green"> Yes </a>
+		<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-green"> Yes </a> <!-- Button with the answer choice yes. When clicked, it scrolls to the next page and adds 1 to the allergy count tracker -->
 
-		<a href="#two"  onclick="coldAdd();" class="w3-btn w3-red"> No </a>
+		<a href="#two"  onclick="coldAdd();" class="w3-btn w3-red"> No </a> <!-- Button with the answer choice no When clicked, it scrolls to the next page and adds 1 to the cold count tracker -->
 			
     	</div>
 </div>
