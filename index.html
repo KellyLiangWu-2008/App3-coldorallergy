@@ -49,17 +49,17 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
             cold_count = cold_count + 1;
         }
 
-  </script>
+		function results(){
+			var total = allergy_count + cold_count;
+			var allergyPercent = (allergy_count/total) * 100
+			var coldPercent = (cold_count/total) * 100
 
-function results(){
-	var total = allergy_count + cold_count;
-	var allergyPercent = (allergy_count/total) * 100
-	var coldPercent = (cold_count/total) * 100
+			document.getElementById("results").innerHTML = 
+				"Allergy: " + allergyPercent + "%<br>" +
+				"Cold: " + coldPercent + "%";
 
-	document.getElementById("results").innerHTML = 
-	"Allergy: " + allergyPercent + "%<br>" +
-	"Cold: " + coldPercent + "%";
-
+		}
+<script>
 
 <style>	
 .body {
