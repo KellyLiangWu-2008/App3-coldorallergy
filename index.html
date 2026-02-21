@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html> <!-- Declares that the code is written in html -->
 <html> 
 <!-- The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only.  Any user of this code does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.
  
@@ -7,7 +7,7 @@ THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
  
 Authors in chronological order of contribution:
 Tim Riedel
-Author 2
+Kelly Liang Wu
  
 Further Information:
 http://cns.utexas.edu/fri
@@ -20,22 +20,22 @@ Brief Description of Goal of Code:
 The goal of this code is to calculate whether the symptoms one is experiencing is correlated to allergies or cold. Based on a series of questions, this code will calculate the percentage that the symptoms are cold or allergies.
  
 Known Issues:
-This code is very limited in the questions that are asked and should not be used to diagnose one's sickness. 
+This code is very limited in the questions that are asked and should not be used to diagnose one's sickness. This code also doesn't work when a user skips a question.
 
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
 -->
 	
    <head> 
-      <title>Cold or Allergies</title>  
+      <title>Cold or Allergies</title>  <!-- Displays the title for the website -->
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-capable" content="yes"> <!-- Allows for the website to work on Apple devices -->
       <link rel="stylesheet" href="w3.css">
       <link rel="stylesheet" href="w3-colors-flat.css">
    </head> 
 
 
-<script>
+<script> <!-- This marks the start of the Java script code -->
         var allergy_count = 0; // This variable keeps track of the allergy count and starts at zero
         var cold_count = 0; // This variable keeps track of the cold count and starts at zero
 
@@ -45,11 +45,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
         }
 
-        function coldAdd(){ // This function is for when an answer for allergy is chosen
+        function coldAdd(){ // This function is for when an answer for cold is chosen
             cold_count = cold_count + 1; // This stores responses for cold and adds 1 every time a symptom for cold is chosen
         }
 
-		function results(){
+		function results(){ // This function displays and calculates the results for the results page
 			var total = allergy_count + cold_count; // This calculates the total for both allergy and cold count in order to find the AllergyPercent and ColdPercent
 			var allergyPercent = (allergy_count/total) * 100 // This outputs the result of the survey by calculating the percentage of the answers that supports the diagnosis of allergies
 			var coldPercent = (cold_count/total) * 100 // This outputs the result of the survey by calculating the percentage of the answers that supports the diagnosis of cold
@@ -59,9 +59,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 				"Cold: " + coldPercent + "%"; // Displays the final results for cold percentage calculation
 
 		}
-</script>
+</script> <!-- This concludes the Java script code -->
 
-<style>	
+<style>	<!-- CSS that codes for the style of the site -->
 .body {
      margin: 0em;
 }
@@ -83,12 +83,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 }
 </style>
 
-<body>
-<div id="header" class="w3-container w3-flat-carrot">
-	<h1>Cold or Allergies?</h1> <!-- Header for the first page of the website -->
+<body> <!-- Section that includes the information visible to the user -->
+<div id="header" class="w3-container w3-flat-carrot"> <!-- Creates the header for the page -->
+	<h1>Cold or Allergies?</h1> <!-- Text for the header for the first page of the website -->
 </div>
 	
-<div id="content" class="w3-container">
+<div id="content" class="w3-container"> <!-- This element includes the texts and buttons for the page -->
 	<p>Are you feeling like you might have a cold but wonder if it is allergies. Answer a few short questions to find out!</p>
 	
 	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a> <!-- Button to allow the app to scroll to the next page when clicked -->
@@ -106,14 +106,14 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     	<div id="content1" class="w3-container">
         <p>Are your eyes watery or itchy?</p>    
 
-		<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-green"> Yes </a> <!-- Button with the answer choice yes. When clicked, it scrolls to the next page and adds 1 to the allergy count tracker -->
+		<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-green"> Yes </a> <!-- Button with the answer choice yes. When clicked, it scrolls to the next page and adds 1 to the allergy count tracker with the allergyAdd() function in Java script -->
 
-		<a href="#two"  onclick="coldAdd();" class="w3-btn w3-red"> No </a> <!-- Button with the answer choice no When clicked, it scrolls to the next page and adds 1 to the cold count tracker -->
+		<a href="#two"  onclick="coldAdd();" class="w3-btn w3-red"> No </a> <!-- Button with the answer choice no When clicked, it scrolls to the next page and adds 1 to the cold count tracker with the coldyAdd() function in Java script -->
 			
     	</div>
 </div>
 
-<div class="page" id="two">
+<div class="page" id="two"> <!-- Creates a new page and assigns its id as two so that when the button on page 1 is clicked it moves to this page -->
 	<div class="w3-container w3-flat-carrot">
 		<h1>Question 2</h1>
 	</div>
@@ -121,14 +121,14 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<div id="content2" class="w3-container">
 		<p>Do you have a fever?</p>
 
-		<a href="#three"  onclick="coldAdd();" class="w3-btn w3-green"> Yes </a> <!-- Button with the answer choice yes. When clicked, it scrolls to the next page and adds 1 to the cold count tracker -->
+		<a href="#three"  onclick="coldAdd();" class="w3-btn w3-green"> Yes </a> <!-- Button with the answer choice yes. When clicked, it scrolls to the next page and adds 1 to the cold count tracker with the coldyAdd() function in Java script -->
 
-		<a href="#three"  onclick="allergyAdd();" class="w3-btn w3-red"> No </a> <!-- Button with the answer choice no. When clicked, it scrolls to the next page and adds 1 to the allergy count tracker -->
+		<a href="#three"  onclick="allergyAdd();" class="w3-btn w3-red"> No </a> <!-- Button with the answer choice no. When clicked, it scrolls to the next page and adds 1 to the allergy count tracker with the allergyAdd() function in Java script -->
 		
 		</div>
 </div>	
 
-<div class="page" id="three">
+<div class="page" id="three"> <!-- Creates a new page and assigns its id as three so that when the button on page 2 is clicked it moves to this page -->
 	<div class="w3-container w3-flat-carrot">
 		<h1>Question 3</h1>
 	</div>
@@ -136,13 +136,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<div id="content3" class="w3-container">
 		<p>Do you have a sore throat</p> 
 
-		<a href="#four"  onclick="coldAdd();" class="w3-btn w3-green"> Yes </a> <!-- Button with the answer choice yes. When clicked, it scrolls to the next page and adds 1 to the cold count tracker -->
+		<a href="#four"  onclick="coldAdd();" class="w3-btn w3-green"> Yes </a> <!-- Button with the answer choice yes. When clicked, it scrolls to the next page and adds 1 to the cold count tracker with the coldyAdd() function in Java script -->
 
-		<a href="#four"  onclick="allergyAdd();" class="w3-btn w3-red"> No </a> <!-- Button with the answer choice no. When clicked, it scrolls to the next page and adds 1 to the allergy count tracker -->
+		<a href="#four"  onclick="allergyAdd();" class="w3-btn w3-red"> No </a> <!-- Button with the answer choice no. When clicked, it scrolls to the next page and adds 1 to the allergy count tracker with the allergyAdd() function in Java script -->
 		</div>
 </div>
 
-<div class="page" id="four">
+<div class="page" id="four"> <!-- Creates a new page and assigns its id as four so that when the button on page 3 is clicked it moves to this page -->
 	<div class="w3-container w3-flat-carrot">
 		<h1>Question 4</h1>
 	</div>
@@ -150,25 +150,25 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<div id="content4" class="w3-container">
 		<p>Are your symptoms seasonal or chronic?</p>
 
-		<a href="#resultsPage"  onclick="allergyAdd();" class="w3-btn w3-green"> Seasonal </a> <!-- Button with the answer choice seasonal. When clicked, it scrolls to the next page and adds 1 to the allergy count tracker -->
+		<a href="#resultsPage"  onclick="allergyAdd();" class="w3-btn w3-green"> Seasonal </a> <!-- Button with the answer choice seasonal. When clicked, it scrolls to the next page and adds 1 to the allergy count tracker with the allergyAdd() function in Java script -->
 
-		<a href="#resultsPage"  onclick="coldAdd();" class="w3-btn w3-red"> Chronic </a> <!-- Button with the answer choice chronic. When clicked, it scrolls to the next page and adds 1 to the cold count tracker -->
+		<a href="#resultsPage"  onclick="coldAdd();" class="w3-btn w3-red"> Chronic </a> <!-- Button with the answer choice chronic. When clicked, it scrolls to the next page and adds 1 to the cold count tracker with the coldyAdd() function in Java script -->
 
 		</div>
 </div>
 
-<div class="page" id="resultsPage">
+<div class="page" id="resultsPage"> <!-- Creates a new page and assigns its id as resultsPage so that when the button on page 4 is clicked it moves to this page -->
 	<div class="w3-container w3-flat-carrot">
 		<h1>Your Results</h1>
 	</div>
 	
 	<div class="w3-container"> 
-		<p id="results"></p>
-		<a onclick="results()" class="w3-btn w3-black">Show Results</a>
+		<p id="results"></p> 
+		<a onclick="results()" class="w3-btn w3-black">Show Results</a> <!-- Displays and runs the calculation for the results of the diagnostic -->
     </div>
 </div>
 
-<footer class="w3-bottom w3-container w3-flat-carrot">
+<footer class="w3-bottom w3-container w3-flat-carrot"> <!-- Displays the footer of the page -->
 	<p>DIY!</p>
 </footer>
 
