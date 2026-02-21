@@ -42,7 +42,6 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
         function allergyAdd(){
             allergy_count = allergy_count + 1;
-		alert(allergy_count);
 
         }
 
@@ -130,10 +129,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<div id="content" class="w3-container">
 		<p>Do you have a sore throat</p> 
 
-		<a href="#four"  onclick="coldAdd();" class="w3-btn w3-green"> Yes </a> / / This function adds 1 to the cold count when the user presses it.
+		<a href="#four"  onclick="coldAdd();" class="w3-btn w3-green"> Yes </a> 
 
-		<a href="#four"  onclick="allergyAdd();" class="w3-btn w3-red"> No </a> / / This function adds 1 to the allergy count when the user presses it.
-
+		<a href="#four"  onclick="allergyAdd();" class="w3-btn w3-red"> No </a> 
 		</div>
 </div>
 
@@ -158,7 +156,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
 	<div class="w3-container">
-		<p> id="results"></p>
+		<p id="results"></p>
 		<a onclick="results()" class="w3-btn w3-black">Show Results</a>
     </div>
 </div>
